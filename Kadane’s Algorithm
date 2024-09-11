@@ -1,0 +1,14 @@
+//Kadane’s Algorithm
+func kadanes(_ arr: [Int]) -> Int{
+    var max = arr[0]
+    for i in 0..<arr.count{
+        var curr = 0
+        for j in i..<arr.count{
+            curr = curr + arr[j]
+            if curr > max{
+                max = curr
+            }
+        }
+    }
+    return max
+}
